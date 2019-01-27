@@ -17,11 +17,12 @@ import CoreLocation
 class ViewController: UIViewController {
     
     
+    @IBOutlet var hello_world_button: UIButton!
     @IBOutlet var mapView: MKMapView!
     
     var all_locations : [CLLocationCoordinate2D] = []
     var all_locations_titles: [String] = []
-    //var all_locations_subtitles: [String] = []
+    var all_locations_hello: [String] = []
     //Mexico
     var span = MKCoordinateSpan(latitudeDelta: 5, longitudeDelta: 5)
     
@@ -33,6 +34,9 @@ class ViewController: UIViewController {
         annotation.title = all_locations_titles[button_counter]
         mapView.addAnnotation(annotation)
         mapView.setRegion(region, animated: true)
+        hello_world_button.setTitle(all_locations_hello[button_counter], for: .normal)
+        
+        
     }
     
     
@@ -111,30 +115,39 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         all_locations.append(CLLocationCoordinate2DMake(42.0893553, -75.96970490000001))
         all_locations_titles.append("Binghamton University")
+        all_locations_hello.append("Hello World")
         //Mexico
         all_locations.append(CLLocationCoordinate2DMake(23.624501, -102.55278399999997))
         all_locations_titles.append("Mexico")
+        all_locations_hello.append("Hola Mundo")
         //France
         all_locations.append(CLLocationCoordinate2DMake(46.227638, 2.213749000000007))
         all_locations_titles.append("France")
+        all_locations_hello.append("Bonjour le monde")
         //Germany
         all_locations.append(CLLocationCoordinate2DMake(51.165691,10.451526000000058))
         all_locations_titles.append("Germany")
+        all_locations_hello.append("Hallo Welt")
         //Kenya
         all_locations.append(CLLocationCoordinate2DMake(-0.023559,37.90619300000003))
         all_locations_titles.append("Kenya")
+        all_locations_hello.append("Salamu, Dunia")
         //Russia
         all_locations.append(CLLocationCoordinate2DMake(61.52401,105.31875600000001))
         all_locations_titles.append("Russia")
+        all_locations_hello.append("Привет, мир")
         //India
         all_locations.append(CLLocationCoordinate2DMake(20.593684,78.96288000000004))
         all_locations_titles.append("India")
+        all_locations_hello.append("नमस्ते दुनिया")
         //China
         all_locations.append(CLLocationCoordinate2DMake(35.86166,104.19539699999996))
         all_locations_titles.append("China")
+        all_locations_hello.append("你好，世界")
         //Japan
         all_locations.append(CLLocationCoordinate2DMake(36.204824,138.252924))
         all_locations_titles.append("Japan")
+        all_locations_hello.append("こんにちは世界")
         // Location of Binghamton University
         var bing_location = all_locations[0]
         
