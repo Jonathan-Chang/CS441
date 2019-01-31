@@ -1,0 +1,98 @@
+commit 8c137abb0f645d5c1a569bfe3e55ba64a136e5d9
+Author: Jonathan Chang <jchang66@binghamton.edu>
+Date:   Wed Jan 30 19:55:20 2019 -0500
+
+    Create README.md
+
+ p1_helloworld/README.md | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 0839ca833697032f47310f2d919c6fc4797e7f6b
+Author: Jonathan Chang <jchang66@binghamton.edu>
+Date:   Wed Jan 30 19:54:14 2019 -0500
+
+    Delete README.md
+
+ README.md | 5 -----
+ 1 file changed, 5 deletions(-)
+
+commit 7e5548176462f06581ba3f5754b325ab441b9059
+Author: Jonathan Chang <jchang66@binghamton.edu>
+Date:   Wed Jan 30 19:53:34 2019 -0500
+
+    Create README.md
+
+ README.md | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+commit cdae1e9acb14a4dbb344223749a3158c8a328be8
+Author: Jonathan <jonathan@Victors-MacBook-Air-2.local>
+Date:   Sun Jan 27 12:11:28 2019 -0500
+
+    Finished
+
+ .../UserInterfaceState.xcuserstate                  | Bin 24388 -> 24849 bytes
+ .../p1_helloworld/Base.lproj/Main.storyboard        |   3 ++-
+ p1_helloworld/p1_helloworld/ViewController.swift    |  15 ++++++++++++++-
+ 3 files changed, 16 insertions(+), 2 deletions(-)
+
+commit 5b1a36b5a14efad26c7cf750ae8fcc8568b694fc
+Author: Jonathan <jonathan@Victors-MacBook-Air-2.local>
+Date:   Sat Jan 26 21:02:13 2019 -0500
+
+    It is possible to switch between countries with every click
+
+ .../UserInterfaceState.xcuserstate                 | Bin 23119 -> 24388 bytes
+ p1_helloworld/p1_helloworld/ViewController.swift   | 116 +++++++++++++++++----
+ 2 files changed, 95 insertions(+), 21 deletions(-)
+
+commit 1cd47a1ade51ae8297f5c13fc960eb20f26c2301
+Author: Jonathan <jonathan@Victors-MacBook-Air-2.local>
+Date:   Sat Jan 26 13:24:15 2019 -0500
+
+    Adding locations
+
+ .../UserInterfaceState.xcuserstate                 | Bin 21692 -> 23119 bytes
+ .../p1_helloworld/Base.lproj/Main.storyboard       |   9 ++++
+ p1_helloworld/p1_helloworld/ViewController.swift   |  54 ++++++++++++++++++---
+ 3 files changed, 57 insertions(+), 6 deletions(-)
+
+commit 749cb8457780a2dfaa4bc5f50364392b7e9ffe33
+Author: Jonathan <jonathan@Victors-MacBook-Air-2.local>
+Date:   Sat Jan 26 00:43:45 2019 -0500
+
+    Started some code
+
+ .../UserInterfaceState.xcuserstate                 | Bin 9539 -> 21692 bytes
+ .../p1_helloworld/Base.lproj/Main.storyboard       |  27 ++++++++++++++++---
+ p1_helloworld/p1_helloworld/ViewController.swift   |  29 ++++++++++++++++++++-
+ 3 files changed, 51 insertions(+), 5 deletions(-)
+
+commit 56e2da47025e62203955748bc3686e64d4943b22
+Author: Jonathan <jonathan@Victors-MacBook-Air-2.local>
+Date:   Fri Jan 25 23:45:47 2019 -0500
+
+    Test
+
+ .../p1_helloworld.xcodeproj/project.pbxproj        | 339 +++++++++++++++++++++
+ .../project.xcworkspace/contents.xcworkspacedata   |   7 +
+ .../xcshareddata/IDEWorkspaceChecks.plist          |   8 +
+ .../UserInterfaceState.xcuserstate                 | Bin 0 -> 9539 bytes
+ .../xcschemes/xcschememanagement.plist             |  14 +
+ p1_helloworld/p1_helloworld/AppDelegate.swift      |  46 +++
+ .../AppIcon.appiconset/Contents.json               |  98 ++++++
+ .../p1_helloworld/Assets.xcassets/Contents.json    |   6 +
+ .../Base.lproj/LaunchScreen.storyboard             |  25 ++
+ .../p1_helloworld/Base.lproj/Main.storyboard       |  24 ++
+ p1_helloworld/p1_helloworld/Info.plist             |  45 +++
+ p1_helloworld/p1_helloworld/ViewController.swift   |  20 ++
+ 12 files changed, 632 insertions(+)
+
+commit e0a30225c97601b4dfe5379fe68d975d0e6d5f41
+Author: Jonathan Chang <jchang66@binghamton.edu>
+Date:   Fri Jan 25 23:43:30 2019 -0500
+
+    Initial commit
+
+ LICENSE | 21 +++++++++++++++++++++
+ 1 file changed, 21 insertions(+)

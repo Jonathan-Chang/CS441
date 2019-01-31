@@ -28,6 +28,9 @@ class ViewController: UIViewController {
     
     
     func return_location(button_counter: Int){
+        if(button_counter == 7){
+            span = MKCoordinateSpan(latitudeDelta:8, longitudeDelta: 8)
+        }
         var region = MKCoordinateRegion(center: all_locations[button_counter], span: span)
         var annotation = MKPointAnnotation()
         annotation.coordinate = all_locations[button_counter]
