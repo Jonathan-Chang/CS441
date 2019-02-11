@@ -1,4 +1,4 @@
-package jonathan.p2_2048;
+package cs441.p2_2048;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("jonathan.p2_2048", appContext.getPackageName());
+        assertEquals("cs441.p2_2048", appContext.getPackageName());
     }
 }

@@ -1,4 +1,4 @@
-package jonathan.p2_2048;
+package cs441.p2_2048;
 
 import org.junit.Test;
 

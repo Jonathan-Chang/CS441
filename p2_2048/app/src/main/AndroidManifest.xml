@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="jonathan.p2_2048">
+    package="cs441.p2_2048">
 
     <application
         android:allowBackup="true"
