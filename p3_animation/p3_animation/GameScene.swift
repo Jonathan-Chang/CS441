@@ -13,6 +13,23 @@ class GameScene: SKScene {
     
     let ironMan = SKSpriteNode(imageNamed: "ironman")
     
+    let gameRect: CGRect
+    override init(size: CGSize){
+        
+        
+        let maxRatio: CGFloat = 16.0/9.0
+        let playableWidth = size.height / maxRatio
+        let margin = (size.width - playableWidth) / 2
+        
+        gameRect = CGRect(x: margin, y: 0, width: playableWidth, height: size.height)
+        super.init(size: size)
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func didMove(to view: SKView) {
         
         ironMan.setScale(10)
@@ -39,6 +56,27 @@ class GameScene: SKScene {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         fireIron()
+    }
+    
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for touch: AnyObject in touches{
+            let pointOfTouch = touch.location(in: self)
+            let previousTouch = touch.previousLocation(in: self)
+            let amtDrag = pointOfTouch.x - previousTouch.x
+            
+            ironMan.position.x += amtDrag
+            
+            
+            if ironMan.position.x > gameRect.maxX{
+                ironMan.position.x
+            }
+            
+            
+        
+            
+            
+        }
     }
     
 }
