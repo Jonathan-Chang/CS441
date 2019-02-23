@@ -69,14 +69,122 @@ class GameScene: SKScene {
             
             
             if ironMan.position.x > gameRect.maxX{
-                ironMan.position.x
+                
             }
-            
-            
-        
-            
             
         }
     }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for touch: AnyObject in touches{
+            let pointOfTouch = touch.location(in: self)
+            let previousTouch = touch.previousLocation(in: self)
+            let amtDrag = pointOfTouch.x - previousTouch.x
+            
+            ironMan.position.x += amtDrag
+            
+            
+            if ironMan.position.x > gameRect.maxX{
+                
+            }
+            
+        }
+    }
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for touch: AnyObject in touches{
+            let pointOfTouch = touch.location(in: self)
+            let previousTouch = touch.previousLocation(in: self)
+            let amtDrag = pointOfTouch.x - previousTouch.x
+            
+            ironMan.position.x += amtDrag
+            
+            
+            if ironMan.position.x > gameRect.maxX{
+                
+            }
+            
+        }
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for touch: AnyObject in touches{
+            let pointOfTouch = touch.location(in: self)
+            let previousTouch = touch.previousLocation(in: self)
+            let amtDrag = pointOfTouch.x - previousTouch.x
+            
+            ironMan.position.x += amtDrag
+            
+            
+            if ironMan.position.x > gameRect.maxX{
+                
+            }
+            
+        }
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for touch: AnyObject in touches{
+            let pointOfTouch = touch.location(in: self)
+            let previousTouch = touch.previousLocation(in: self)
+            let amtDrag = pointOfTouch.x - previousTouch.x
+            
+            ironMan.position.x += amtDrag
+            
+            
+            if ironMan.position.x > gameRect.maxX{
+                
+            }
+            
+        }
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for touch: AnyObject in touches{
+            let pointOfTouch = touch.location(in: self)
+            let previousTouch = touch.previousLocation(in: self)
+            let amtDrag = pointOfTouch.x - previousTouch.x
+            
+            ironMan.position.x += amtDrag
+            
+            
+            if ironMan.position.x > gameRect.maxX{
+                
+            }
+            
+        }
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for touch: AnyObject in touches{
+            let pointOfTouch = touch.location(in: self)
+            let previousTouch = touch.previousLocation(in: self)
+            let amtDrag = pointOfTouch.x - previousTouch.x
+            
+            ironMan.position.x += amtDrag
+            
+            
+            if ironMan.position.x > gameRect.maxX{
+                
+            }
+            
+        }
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for touch: AnyObject in touches{
+            let pointOfTouch = touch.location(in: self)
+            let previousTouch = touch.previousLocation(in: self)
+            let amtDrag = pointOfTouch.x - previousTouch.x
+            
+            ironMan.position.x += amtDrag
+            
+            
+            if ironMan.position.x > gameRect.maxX{
+                
+            }
+            
+        }
+    }
+    
     
 }
