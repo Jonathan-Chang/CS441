@@ -13,6 +13,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
     
     let ironMan = SKSpriteNode(imageNamed: "ironman")
     
+    
+    struct PhysicsCat{
+        static let None: UInt32 = 0
+        static let IronMan: UInt32 = 0b1 // 1
+        static let Laser: UInt32 = 0b10
+        static let Enemy: UInt32 = 0b100
+    }
+    
+    
+    
     func random() -> CGFloat {
         return CGFloat(Float(arc4random()) / 0xFFFFFFFF)
     }
@@ -46,12 +56,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         ironMan.zPosition = 2
         ironMan.physicsBody = SKPhysicsBody(rectangleOf: ironMan.size)
         ironMan.physicsBody!.affectedByGravity = false
+        ironMan.physicsBody!.categoryBitMask = PhysicsCat.IronMan
+        ironMan.physicsBody!.collisionBitMask = PhysicsCat.None
+        ironMan.physicsBody!.contactTestBitMask = PhysicsCat.Enemy
+        
         
         
         self.addChild(ironMan)
         
         startLevel()
     }
+    
+    
+    func didBegin(_ contact: SKPhysicsContact) {
+        
+    }
+    
     
     func startLevel(){
         let spawn = SKAction.run(enemySpawn)
@@ -70,8 +90,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         laser.setScale(1)
         laser.position = ironMan.position
         laser.zPosition = 1
-        laser.physicsBody = SKPhysicsBody(rectangleOf: bullet.size)
+        laser.physicsBody = SKPhysicsBody(rectangleOf: laser.size)
         laser.physicsBody!.affectedByGravity = false
+        laser.physicsBody!.categoryBitMask = PhysicsCat.Laser
+        
+        laser.physicsBody!.collisionBitMask = PhysicsCat.None
+        laser.physicsBody!.contactTestBitMask = PhysicsCat.Enemy
+        
         
         self.addChild(laser)
         
@@ -121,6 +146,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         enemy.zPosition = 2
         enemy.physicsBody = SKPhysicsBody(rectangleOf: enemy.size)
         enemy.physicsBody!.affectedByGravity = false
+        enemy.physicsBody!.categoryBitMask = PhysicsCat.Enemy
+        //Physics body of enemy dont wan't it to collide
+        //But we want it to make contact w/ ironman and laser
+        enemy.physicsBody!.collisionBitMask = PhysicsCat.None
+        enemy.physicsBody!.contactTestBitMask = PhysicsCat.IronMan | PhysicsCat.Laser
         
         
         
@@ -136,12 +166,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         let dy = endPoint.y - startPoint.y
         let amountRotate = atan2(dy, dx)
         enemy.zRotation = amountRotate
-        
-        
-        
-        
-        
-        
         
         
     }
