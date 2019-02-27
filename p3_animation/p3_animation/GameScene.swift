@@ -9,7 +9,7 @@
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate{
     
     let ironMan = SKSpriteNode(imageNamed: "ironman")
     
@@ -40,11 +40,29 @@ class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
         
+        self.physicsWorld.contactDelegate = self
         ironMan.setScale(10)
         ironMan.position = CGPoint(x: self.size.width/2, y: self.size.height * 0.2)
         ironMan.zPosition = 2
+        ironMan.physicsBody = SKPhysicsBody(rectangleOf: ironMan.size)
+        ironMan.physicsBody!.affectedByGravity = false
+        
+        
         self.addChild(ironMan)
+        
+        startLevel()
     }
+    
+    func startLevel(){
+        let spawn = SKAction.run(enemySpawn)
+        let waitSpawn = SKAction.wait(forDuration: 1)
+        let spawnSequence = SKAction.sequence([spawn, waitSpawn])
+        let spawning = SKAction.repeatForever(spawnSequence)
+        self.run(spawning)
+        
+        
+    }
+    
     
     
     func fireIron(){
@@ -52,6 +70,9 @@ class GameScene: SKScene {
         laser.setScale(1)
         laser.position = ironMan.position
         laser.zPosition = 1
+        laser.physicsBody = SKPhysicsBody(rectangleOf: bullet.size)
+        laser.physicsBody!.affectedByGravity = false
+        
         self.addChild(laser)
         
         let moveLaser = SKAction.moveTo(y: self.size.height + laser.size.height , duration: 1)
@@ -64,6 +85,7 @@ class GameScene: SKScene {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         fireIron()
+        
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -97,6 +119,11 @@ class GameScene: SKScene {
         enemy.setScale(1)
         enemy.position = startPoint
         enemy.zPosition = 2
+        enemy.physicsBody = SKPhysicsBody(rectangleOf: enemy.size)
+        enemy.physicsBody!.affectedByGravity = false
+        
+        
+        
         self.addChild(enemy)
         
         let moveEnemy = SKAction.move(to: endPoint, duration: 1.5)
@@ -104,6 +131,12 @@ class GameScene: SKScene {
         
         let enemySequence = SKAction.sequence([moveEnemy,deleteEnemy])
         enemy.run(enemySequence)
+        
+        let dx = endPoint.x - startPoint.x
+        let dy = endPoint.y - startPoint.y
+        let amountRotate = atan2(dy, dx)
+        enemy.zRotation = amountRotate
+        
         
         
         
