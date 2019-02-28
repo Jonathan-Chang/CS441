@@ -11,7 +11,23 @@ import GameplayKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate{
     
+    var score = 0
+    var lives = 3
+    var livesSprite1 = SKSpriteNode(imageNamed: "ironmanlives")
+    var livesSprite2 = SKSpriteNode(imageNamed: "ironmanlives")
+    var livesSprite3 = SKSpriteNode(imageNamed: "ironmanlives")
+    
+    let scoreLabel = SKLabelNode(text: "")
+    
     let ironMan = SKSpriteNode(imageNamed: "ironman")
+    
+    enum state{
+        case pre
+        case ing
+        case after
+    }
+    
+    var currState = state.ing
     
     
     struct PhysicsCat{
@@ -61,21 +77,153 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         ironMan.physicsBody!.contactTestBitMask = PhysicsCat.Enemy
         
         
-        
         self.addChild(ironMan)
+        
+        
+        scoreLabel.text = "Score: 0"
+        scoreLabel.fontSize = 70
+        scoreLabel.fontColor = SKColor.white
+        scoreLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.left
+        scoreLabel.position = CGPoint(x: self.size.width*0.15, y:self.size.height*0.9)
+        scoreLabel.zPosition = 100
+        self.addChild(scoreLabel)
+        
+        
+        
+        livesSprite1.setScale(3)
+        livesSprite1.zPosition = 100
+        livesSprite1.position = CGPoint(x: self.size.width*0.75, y: self.size.height * 0.9)
+        
+        livesSprite2.setScale(3)
+        livesSprite2.zPosition = 100
+        livesSprite2.position = CGPoint(x: self.size.width*0.80, y: self.size.height * 0.9)
+        
+        livesSprite3.setScale(3)
+        livesSprite3.zPosition = 100
+        livesSprite3.position = CGPoint(x: self.size.width*0.85, y: self.size.height * 0.9)
+        self.addChild(livesSprite1)
+        self.addChild(livesSprite2)
+        self.addChild(livesSprite3)
+        
         
         startLevel()
     }
     
+    func loseLife(){
+        lives -= 1
+        if lives == 2{
+            livesSprite1.removeFromParent()
+        }
+        if lives == 1{
+            livesSprite2.removeFromParent()
+        }
+        if lives == 0{
+            livesSprite3.removeFromParent()
+        }
+        if lives == -1{
+            gameOver()
+        }
+        
+    }
+    
+    func gameOver(){
+        currState = state.after
+        
+        self.removeAllActions()
+        self.enumerateChildNodes(withName: "Laser"){
+            laser, stop in
+            laser.removeAllActions()
+        }
+        
+        self.enumerateChildNodes(withName: "Enemy"){
+            enemy, stop in
+            enemy.removeAllActions()
+        }
+        
+        
+        
+    }
+    
+    
+    func incrementScore(){
+        score += 1
+        scoreLabel.text = "Score: \(score)"
+        
+        //if score == 100 { do something }
+        
+    }
+    
     
     func didBegin(_ contact: SKPhysicsContact) {
+        var bod1 = SKPhysicsBody()
+        var bod2 = SKPhysicsBody()
         
+        if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask{
+            bod1 = contact.bodyA
+            bod2 = contact.bodyB
+        }
+        else{
+            bod1 = contact.bodyB
+            bod2 = contact.bodyA
+        }
+        
+        if bod1.categoryBitMask == PhysicsCat.IronMan && bod2.categoryBitMask == PhysicsCat.Enemy{
+            
+            loseLife()
+            if(bod1.node != nil){
+                spawnExplode(spawnPosition: bod1.node!.position)
+            }
+            if (bod2.node != nil){
+                spawnExplode(spawnPosition: bod2.node!.position)
+            }
+            
+            bod2.node?.removeFromParent()
+            
+        }
+        
+        if bod1.categoryBitMask == PhysicsCat.Laser && bod2.categoryBitMask == PhysicsCat.Enemy{
+            
+            incrementScore()
+            if bod2.node != nil{
+                if bod2.node!.position.y > self.size.height{
+                    return
+                }
+                else{
+                    spawnExplode(spawnPosition: bod2.node!.position)
+                    
+                }
+            }
+            
+            bod1.node?.removeFromParent()
+            bod2.node?.removeFromParent()
+            
+            
+        }
+        
+        
+        
+    }
+    
+    
+    func spawnExplode(spawnPosition: CGPoint){
+        let explosion = SKSpriteNode(imageNamed: "explosion")
+        explosion.position = spawnPosition
+        explosion.zPosition = 3
+        explosion.setScale(0)
+        self.addChild(explosion)
+        
+        let scaleIn = SKAction.scale(to: 1, duration: 0.1)
+        let fadeOut = SKAction.fadeOut(withDuration: 0.1)
+        let deleteExplosion = SKAction.removeFromParent()
+        
+        let explosionSequence = SKAction.sequence([scaleIn, fadeOut,deleteExplosion])
+        explosion.run(explosionSequence)
     }
     
     
     func startLevel(){
         let spawn = SKAction.run(enemySpawn)
-        let waitSpawn = SKAction.wait(forDuration: 1)
+        let waitSpawn = SKAction.wait(forDuration: 3)
         let spawnSequence = SKAction.sequence([spawn, waitSpawn])
         let spawning = SKAction.repeatForever(spawnSequence)
         self.run(spawning)
@@ -87,6 +235,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
     
     func fireIron(){
         let laser = SKSpriteNode(imageNamed: "ironmanblast")
+        laser.name = "Laser"
         laser.setScale(1)
         laser.position = ironMan.position
         laser.zPosition = 1
@@ -109,7 +258,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        fireIron()
+        if currState == state.ing{
+        
+            fireIron()
+        }
         
     }
     
@@ -119,8 +271,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
             let previousTouch = touch.previousLocation(in: self)
             let amtDrag = pointOfTouch.x - previousTouch.x
             
-            ironMan.position.x += amtDrag
-            
+            if(currState == state.ing){
+                ironMan.position.x += amtDrag
+            }
             
             if ironMan.position.x > gameRect.maxX - ironMan.size.width/2{
                 ironMan.position.x = gameRect.maxX - ironMan.size.width/2
@@ -141,7 +294,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         let endPoint = CGPoint(x: randXEnd, y: -self.size.height * 1.2)
         
         let enemy = SKSpriteNode(imageNamed: "alien")
-        enemy.setScale(1)
+        enemy.name = "Enemy"
+        enemy.setScale(2)
         enemy.position = startPoint
         enemy.zPosition = 2
         enemy.physicsBody = SKPhysicsBody(rectangleOf: enemy.size)
@@ -158,9 +312,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         
         let moveEnemy = SKAction.move(to: endPoint, duration: 1.5)
         let deleteEnemy = SKAction.removeFromParent()
+        let loseALife = SKAction.run(loseLife)
+        let enemySequence = SKAction.sequence([moveEnemy,deleteEnemy, loseALife])
         
-        let enemySequence = SKAction.sequence([moveEnemy,deleteEnemy])
-        enemy.run(enemySequence)
+        if currState == state.ing{
+            enemy.run(enemySequence)
+        }
         
         let dx = endPoint.x - startPoint.x
         let dy = endPoint.y - startPoint.y
