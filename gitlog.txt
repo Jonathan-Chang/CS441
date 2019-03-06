@@ -1,0 +1,433 @@
+commit 13053219dfe45dbd30b005dab86113d63f9adcba
+Author: Jonathan Chang <jchang66@binghamton.edu>
+Date:   Wed Feb 27 22:59:08 2019 -0500
+
+    Create README.md
+
+ p3_animation/README.md | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+commit f129a591d9af0a9272088cc5fa3081becce72495
+Author: Jonathan <jonathan@Victors-MacBook-Air-2.local>
+Date:   Wed Feb 27 22:51:58 2019 -0500
+
+    wow
+
+ .../UserInterfaceState.xcuserstate                 | Bin 29428 -> 25562 bytes
+ .../5a2ccb17d752f8.967698131512885015882.png       | Bin 0 -> 111796 bytes
+ .../explosion.imageset/Contents.json               |  21 +++
+ .../ironmanlives.imageset/Contents.json            |  21 +++
+ .../ironmanlives.imageset/tile002.png              | Bin 0 -> 795 bytes
+ p3_animation/p3_animation/GameScene.swift          | 173 ++++++++++++++++++++-
+ 6 files changed, 207 insertions(+), 8 deletions(-)
+
+commit d5959dc95e365b89dcfc9d0603c8bccbaa0b8c2f
+Author: Jonathan <jonathan@Victors-MacBook-Air-2.local>
+Date:   Wed Feb 27 00:52:09 2019 -0500
+
+    more physics
+
+ .../UserInterfaceState.xcuserstate                 | Bin 29342 -> 29428 bytes
+ p3_animation/p3_animation/GameScene.swift          |  38 +++++++++++++++++----
+ 2 files changed, 31 insertions(+), 7 deletions(-)
+
+commit e62e2203e98c7136791a12860d603a53fdbecfff
+Author: Jonathan <jonathan@Victors-MacBook-Air-2.local>
+Date:   Tue Feb 26 22:57:58 2019 -0500
+
+    physics
+
+ .../UserInterfaceState.xcuserstate                 | Bin 29359 -> 29342 bytes
+ p3_animation/p3_animation/GameScene.swift          |  35 ++++++++++++++++++++-
+ 2 files changed, 34 insertions(+), 1 deletion(-)
+
+commit 2e786dabd5976aa7bf4401b4c446d455cd12ac0d
+Author: Jonathan <jonathan@Victors-MacBook-Air-2.local>
+Date:   Sat Feb 23 23:52:17 2019 -0500
+
+    Enemies
+
+ .../UserInterfaceState.xcuserstate                 | Bin 29268 -> 29359 bytes
+ .../Assets.xcassets/alien.imageset/0-2.png         | Bin 0 -> 2515 bytes
+ .../Assets.xcassets/alien.imageset/Contents.json   |  21 +++
+ p3_animation/p3_animation/GameScene.swift          | 145 ++++++---------------
+ 4 files changed, 58 insertions(+), 108 deletions(-)
+
+commit 8a3a67340769c507b000cc3833f23a526d5e3b94
+Author: Jonathan <jonathan@Victors-MacBook-Air-2.local>
+Date:   Fri Feb 22 23:00:57 2019 -0500
+
+    Captain
+
+ .../UserInterfaceState.xcuserstate                 | Bin 29704 -> 29268 bytes
+ .../p3_animation/Assets.xcassets/.DS_Store         | Bin 6148 -> 6148 bytes
+ p3_animation/p3_animation/GameScene.swift          | 112 ++++++++++++++++++++-
+ 3 files changed, 110 insertions(+), 2 deletions(-)
+
+commit 33080f880766b0960017007a87d59656cf2d53ef
+Author: Jonathan <jonathan@Victors-MacBook-Air-2.local>
+Date:   Thu Feb 21 22:24:10 2019 -0500
+
+    Screen size
+
+ .../UserInterfaceState.xcuserstate                 | Bin 29227 -> 29704 bytes
+ p3_animation/p3_animation/GameScene.swift          |  38 +++++++++++++++++++++
+ 2 files changed, 38 insertions(+)
+
+commit 81c473143e67e0d35680e111a9aa763b662ec278
+Author: Jonathan <jonathan@Victors-MacBook-Air-2.local>
+Date:   Wed Feb 20 23:08:13 2019 -0500
+
+    lasers
+
+ .../UserInterfaceState.xcuserstate                 | Bin 15084 -> 29227 bytes
+ .../p3_animation/Assets.xcassets/.DS_Store         | Bin 0 -> 6148 bytes
+ .../Assets.xcassets/ironmanblast.imageset/0.png    | Bin 35677 -> 31371 bytes
+ p3_animation/p3_animation/GameScene.sks            | Bin 4694 -> 4056 bytes
+ p3_animation/p3_animation/GameScene.swift          |  81 +++++----------------
+ p3_animation/p3_animation/GameViewController.swift |   4 +-
+ 6 files changed, 19 insertions(+), 66 deletions(-)
+
+commit 54263b25f69f86b5d2a509cdac442591e0b863a5
+Author: Jonathan <jonathan@Victors-MacBook-Air-2.local>
+Date:   Tue Feb 19 21:45:20 2019 -0500
+
+    Sprites
+
+ .../UserInterfaceState.xcuserstate                 | Bin 9507 -> 15084 bytes
+ .../captainamerica.imageset/Contents.json          |  21 +++++++++++++++++++++
+ .../captainamerica.imageset/tile012.png            | Bin 0 -> 732 bytes
+ .../captainshield.imageset/0 - Copy.png            | Bin 0 -> 9944 bytes
+ .../captainshield.imageset/Contents.json           |  21 +++++++++++++++++++++
+ .../Assets.xcassets/ironman.imageset/Contents.json |  21 +++++++++++++++++++++
+ .../Assets.xcassets/ironman.imageset/tile012.png   | Bin 0 -> 736 bytes
+ .../Assets.xcassets/ironmanblast.imageset/0.png    | Bin 0 -> 35677 bytes
+ .../ironmanblast.imageset/Contents.json            |  21 +++++++++++++++++++++
+ .../Assets.xcassets/thor.imageset/Contents.json    |  21 +++++++++++++++++++++
+ .../Assets.xcassets/thor.imageset/tile012.png      | Bin 0 -> 787 bytes
+ .../thorhammer.imageset/0 - Copy (2).png           | Bin 0 -> 4419 bytes
+ .../thorhammer.imageset/Contents.json              |  21 +++++++++++++++++++++
+ p3_animation/p3_animation/GameScene.swift          |   2 ++
+ p3_animation/p3_animation/Info.plist               |   7 ++-----
+ 15 files changed, 130 insertions(+), 5 deletions(-)
+
+commit 1d0740d2783c1d819d05deaa8fadb322298b23c6
+Author: Jonathan <jonathan@Victors-MacBook-Air-2.local>
+Date:   Sun Feb 17 12:49:50 2019 -0500
+
+    Created REPO
+
+ .DS_Store                                          | Bin 10244 -> 10244 bytes
+ .../p3_animation.xcodeproj/project.pbxproj         | 351 +++++++++++++++++++++
+ .../project.xcworkspace/contents.xcworkspacedata   |   7 +
+ .../xcshareddata/IDEWorkspaceChecks.plist          |   8 +
+ .../UserInterfaceState.xcuserstate                 | Bin 0 -> 9507 bytes
+ .../xcschemes/xcschememanagement.plist             |  14 +
+ p3_animation/p3_animation/Actions.sks              | Bin 0 -> 1892 bytes
+ p3_animation/p3_animation/AppDelegate.swift        |  46 +++
+ .../AppIcon.appiconset/Contents.json               |  98 ++++++
+ .../p3_animation/Assets.xcassets/Contents.json     |   6 +
+ .../Base.lproj/LaunchScreen.storyboard             |  25 ++
+ .../p3_animation/Base.lproj/Main.storyboard        |  24 ++
+ p3_animation/p3_animation/GameScene.sks            | Bin 0 -> 4694 bytes
+ p3_animation/p3_animation/GameScene.swift          |  89 ++++++
+ p3_animation/p3_animation/GameViewController.swift |  50 +++
+ p3_animation/p3_animation/Info.plist               |  47 +++
+ 16 files changed, 765 insertions(+)
+
+commit 0455bd5f68ba0b76d9e21b284d52a5414075af71
+Author: Jonathan Chang <jchang66@binghamton.edu>
+Date:   Wed Feb 13 19:46:53 2019 -0500
+
+    Create README.md
+
+ p2_2048/README.md | 3 +++
+ 1 file changed, 3 insertions(+)
+
+commit 725aeaa5708e84b130d340eb4607bbe04051a5e0
+Author: Jonathan <jchang66@binghamton.edu>
+Date:   Wed Feb 13 19:44:22 2019 -0500
+
+    ?
+
+ p2_2048/app/src/main/AndroidManifest.xml           |   3 +-
+ .../src/main/java/cs441/p2_2048/NumberTile.java    |  18 +-
+ p2_2048/app/src/main/java/cs441/p2_2048/game.java  | 183 +++++++++++++++++++--
+ p2_2048/app/src/main/res/layout/activity_main.xml  |   8 -
+ 4 files changed, 185 insertions(+), 27 deletions(-)
+
+commit 774ddacc72263f372b9e4b0f158ff652bad6ed9e
+Author: Jonathan <jchang66@binghamton.edu>
+Date:   Tue Feb 12 23:29:54 2019 -0500
+
+    ?
+
+ .../src/main/java/cs441/p2_2048/NumberTile.java    | 41 ++++++++++++++++++++++
+ 1 file changed, 41 insertions(+)
+
+commit 4c4d9e31dc763893018ef0eacee55dfb425ea3e8
+Author: Jonathan <jchang66@binghamton.edu>
+Date:   Tue Feb 12 18:17:27 2019 -0500
+
+    Swipez
+
+ p2_2048/app/src/main/java/cs441/p2_2048/game.java | 90 +++++++++++++++++++++++
+ p2_2048/app/src/main/res/layout/activity.xml      |  6 ++
+ p2_2048/app/src/main/res/layout/activity_main.xml | 49 ++++++------
+ 3 files changed, 123 insertions(+), 22 deletions(-)
+
+commit db4d8aff7aeb4c7756f6aac049b20429a91b874b
+Author: Jonathan <jchang66@binghamton.edu>
+Date:   Mon Feb 11 21:33:31 2019 -0500
+
+    layouts
+
+ p2_2048/app/src/main/java/cs441/p2_2048/MainActivity.java |  4 ++++
+ p2_2048/app/src/main/java/cs441/p2_2048/game.java         |  8 ++++++++
+ p2_2048/app/src/main/res/layout/game.xml                  | 12 ++++++++++++
+ 3 files changed, 24 insertions(+)
+
+commit 154dbf14d24ce5971474cbd103370aea1e803bda
+Author: Jonathan <jchang66@binghamton.edu>
+Date:   Mon Feb 11 17:48:31 2019 -0500
+
+    Commits
+
+ .idea/workspace.xml                                | 324 ---------------------
+ p2_2048/.gitignore                                 |   3 +
+ p2_2048/.idea/gradle.xml                           |   3 +
+ p2_2048/.idea/misc.xml                             |   2 +-
+ p2_2048/.idea/vcs.xml                              |   6 +
+ p2_2048/app/CMakeLists.txt                         |  44 ---
+ p2_2048/app/build.gradle                           |  14 +-
+ .../p2_2048/ExampleInstrumentedTest.java           |   4 +-
+ p2_2048/app/src/main/AndroidManifest.xml           |   2 +-
+ p2_2048/app/src/main/cpp/native-lib.cpp            |  12 -
+ .../src/main/java/cs441/p2_2048/MainActivity.java  |  13 +
+ .../main/java/jonathan/p2_2048/MainActivity.java   |  29 --
+ .../res/drawable-v24/ic_launcher_foreground.xml    |  12 +-
+ .../main/res/drawable/ic_launcher_background.xml   | 134 ++++-----
+ p2_2048/app/src/main/res/layout/activity_main.xml  |  26 +-
+ .../app/src/main/res/mipmap-hdpi/ic_launcher.png   | Bin 3056 -> 2963 bytes
+ .../src/main/res/mipmap-hdpi/ic_launcher_round.png | Bin 5024 -> 4905 bytes
+ .../app/src/main/res/mipmap-mdpi/ic_launcher.png   | Bin 2096 -> 2060 bytes
+ .../src/main/res/mipmap-mdpi/ic_launcher_round.png | Bin 2858 -> 2783 bytes
+ .../app/src/main/res/mipmap-xhdpi/ic_launcher.png  | Bin 4569 -> 4490 bytes
+ .../main/res/mipmap-xhdpi/ic_launcher_round.png    | Bin 7098 -> 6895 bytes
+ .../app/src/main/res/mipmap-xxhdpi/ic_launcher.png | Bin 6464 -> 6387 bytes
+ .../main/res/mipmap-xxhdpi/ic_launcher_round.png   | Bin 10676 -> 10413 bytes
+ .../src/main/res/mipmap-xxxhdpi/ic_launcher.png    | Bin 9250 -> 9128 bytes
+ .../main/res/mipmap-xxxhdpi/ic_launcher_round.png  | Bin 15523 -> 15132 bytes
+ p2_2048/app/src/main/res/values/colors.xml         |   6 +-
+ .../p2_2048/ExampleUnitTest.java                   |   2 +-
+ p2_2048/build.gradle                               |   6 +-
+ p2_2048/gradle.properties                          |   2 +
+ p2_2048/gradle/wrapper/gradle-wrapper.jar          | Bin 54708 -> 54329 bytes
+ p2_2048/gradle/wrapper/gradle-wrapper.properties   |   4 +-
+ 31 files changed, 135 insertions(+), 513 deletions(-)
+
+commit cb3035fb0c044b8abe26a5264dd25b49746395b0
+Author: Jonathan <jchang66@binghamton.edu>
+Date:   Sun Feb 10 18:38:45 2019 -0500
+
+    Switched to Android
+
+ .idea/workspace.xml                                | 324 +++++++++++++++++++
+ p2_2048/.DS_Store                                  | Bin 6148 -> 0 bytes
+ p2_2048/.gitignore                                 |  10 +
+ p2_2048/.idea/codeStyles/Project.xml               |  29 ++
+ p2_2048/.idea/gradle.xml                           |  12 +
+ p2_2048/.idea/misc.xml                             |   9 +
+ p2_2048/.idea/runConfigurations.xml                |  12 +
+ p2_2048/app/.gitignore                             |   1 +
+ p2_2048/app/CMakeLists.txt                         |  44 +++
+ p2_2048/app/build.gradle                           |  38 +++
+ p2_2048/app/proguard-rules.pro                     |  21 ++
+ .../jonathan/p2_2048/ExampleInstrumentedTest.java  |  26 ++
+ p2_2048/app/src/main/AndroidManifest.xml           |  21 ++
+ p2_2048/app/src/main/cpp/native-lib.cpp            |  12 +
+ .../main/java/jonathan/p2_2048/MainActivity.java   |  29 ++
+ .../res/drawable-v24/ic_launcher_foreground.xml    |  34 ++
+ .../main/res/drawable/ic_launcher_background.xml   | 170 ++++++++++
+ p2_2048/app/src/main/res/layout/activity_main.xml  |  19 ++
+ .../src/main/res/mipmap-anydpi-v26/ic_launcher.xml |   5 +
+ .../res/mipmap-anydpi-v26/ic_launcher_round.xml    |   5 +
+ .../app/src/main/res/mipmap-hdpi/ic_launcher.png   | Bin 0 -> 3056 bytes
+ .../src/main/res/mipmap-hdpi/ic_launcher_round.png | Bin 0 -> 5024 bytes
+ .../app/src/main/res/mipmap-mdpi/ic_launcher.png   | Bin 0 -> 2096 bytes
+ .../src/main/res/mipmap-mdpi/ic_launcher_round.png | Bin 0 -> 2858 bytes
+ .../app/src/main/res/mipmap-xhdpi/ic_launcher.png  | Bin 0 -> 4569 bytes
+ .../main/res/mipmap-xhdpi/ic_launcher_round.png    | Bin 0 -> 7098 bytes
+ .../app/src/main/res/mipmap-xxhdpi/ic_launcher.png | Bin 0 -> 6464 bytes
+ .../main/res/mipmap-xxhdpi/ic_launcher_round.png   | Bin 0 -> 10676 bytes
+ .../src/main/res/mipmap-xxxhdpi/ic_launcher.png    | Bin 0 -> 9250 bytes
+ .../main/res/mipmap-xxxhdpi/ic_launcher_round.png  | Bin 0 -> 15523 bytes
+ p2_2048/app/src/main/res/values/colors.xml         |   6 +
+ p2_2048/app/src/main/res/values/strings.xml        |   3 +
+ p2_2048/app/src/main/res/values/styles.xml         |  11 +
+ .../java/jonathan/p2_2048/ExampleUnitTest.java     |  17 +
+ p2_2048/build.gradle                               |  27 ++
+ p2_2048/gradle.properties                          |  13 +
+ p2_2048/gradle/wrapper/gradle-wrapper.jar          | Bin 0 -> 54708 bytes
+ p2_2048/gradle/wrapper/gradle-wrapper.properties   |   6 +
+ p2_2048/gradlew                                    | 172 ++++++++++
+ p2_2048/gradlew.bat                                |  84 +++++
+ p2_2048/p2_2048.xcodeproj/project.pbxproj          | 351 ---------------------
+ .../project.xcworkspace/contents.xcworkspacedata   |   7 -
+ .../xcshareddata/IDEWorkspaceChecks.plist          |   8 -
+ .../UserInterfaceState.xcuserstate                 | Bin 22106 -> 0 bytes
+ .../xcschemes/xcschememanagement.plist             |  14 -
+ p2_2048/p2_2048/Actions.sks                        | Bin 1892 -> 0 bytes
+ p2_2048/p2_2048/AppDelegate.swift                  |  46 ---
+ .../AppIcon.appiconset/Contents.json               |  98 ------
+ p2_2048/p2_2048/Assets.xcassets/Contents.json      |   6 -
+ p2_2048/p2_2048/Base.lproj/LaunchScreen.storyboard |  25 --
+ p2_2048/p2_2048/Base.lproj/Main.storyboard         |  24 --
+ p2_2048/p2_2048/GameScene.sks                      | Bin 4092 -> 0 bytes
+ p2_2048/p2_2048/GameScene.swift                    |  45 ---
+ p2_2048/p2_2048/GameViewController.swift           |  50 ---
+ p2_2048/p2_2048/Info.plist                         |  47 ---
+ p2_2048/settings.gradle                            |   1 +
+ 56 files changed, 1161 insertions(+), 721 deletions(-)
+
+commit 7dbaa123103972d48937d8e22ccc1b39b740d71c
+Author: Jonathan <jonathan@Victors-MacBook-Air-2.local>
+Date:   Wed Feb 6 16:40:32 2019 -0500
+
+    Starting the board
+
+ .DS_Store                                          | Bin 10244 -> 10244 bytes
+ p1_helloworld/.DS_Store                            | Bin 6148 -> 8196 bytes
+ .../UserInterfaceState.xcuserstate                 | Bin 24969 -> 25952 bytes
+ .../UserInterfaceState.xcuserstate                 | Bin 10623 -> 22106 bytes
+ p2_2048/p2_2048/GameScene.sks                      | Bin 4694 -> 4092 bytes
+ p2_2048/p2_2048/GameScene.swift                    |  80 +++++----------------
+ 6 files changed, 18 insertions(+), 62 deletions(-)
+
+commit ea64ad8de1280d855bfcecff96918498a5be6936
+Author: Jonathan <jonathan@Victors-MacBook-Air-2.local>
+Date:   Wed Jan 30 21:02:42 2019 -0500
+
+    Created file
+
+ .DS_Store                                          | Bin 0 -> 10244 bytes
+ p1_helloworld/.DS_Store                            | Bin 0 -> 6148 bytes
+ p1_helloworld/gitlog.txt                           |  98 ++++++
+ .../UserInterfaceState.xcuserstate                 | Bin 24849 -> 24969 bytes
+ p1_helloworld/p1_helloworld/ViewController.swift   |   3 +
+ p2_2048/.DS_Store                                  | Bin 0 -> 6148 bytes
+ p2_2048/p2_2048.xcodeproj/project.pbxproj          | 351 +++++++++++++++++++++
+ .../project.xcworkspace/contents.xcworkspacedata   |   7 +
+ .../xcshareddata/IDEWorkspaceChecks.plist          |   8 +
+ .../UserInterfaceState.xcuserstate                 | Bin 0 -> 10623 bytes
+ .../xcschemes/xcschememanagement.plist             |  14 +
+ p2_2048/p2_2048/Actions.sks                        | Bin 0 -> 1892 bytes
+ p2_2048/p2_2048/AppDelegate.swift                  |  46 +++
+ .../AppIcon.appiconset/Contents.json               |  98 ++++++
+ p2_2048/p2_2048/Assets.xcassets/Contents.json      |   6 +
+ p2_2048/p2_2048/Base.lproj/LaunchScreen.storyboard |  25 ++
+ p2_2048/p2_2048/Base.lproj/Main.storyboard         |  24 ++
+ p2_2048/p2_2048/GameScene.sks                      | Bin 0 -> 4694 bytes
+ p2_2048/p2_2048/GameScene.swift                    |  89 ++++++
+ p2_2048/p2_2048/GameViewController.swift           |  50 +++
+ p2_2048/p2_2048/Info.plist                         |  47 +++
+ 21 files changed, 866 insertions(+)
+
+commit 8c137abb0f645d5c1a569bfe3e55ba64a136e5d9
+Author: Jonathan Chang <jchang66@binghamton.edu>
+Date:   Wed Jan 30 19:55:20 2019 -0500
+
+    Create README.md
+
+ p1_helloworld/README.md | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 0839ca833697032f47310f2d919c6fc4797e7f6b
+Author: Jonathan Chang <jchang66@binghamton.edu>
+Date:   Wed Jan 30 19:54:14 2019 -0500
+
+    Delete README.md
+
+ README.md | 5 -----
+ 1 file changed, 5 deletions(-)
+
+commit 7e5548176462f06581ba3f5754b325ab441b9059
+Author: Jonathan Chang <jchang66@binghamton.edu>
+Date:   Wed Jan 30 19:53:34 2019 -0500
+
+    Create README.md
+
+ README.md | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+commit cdae1e9acb14a4dbb344223749a3158c8a328be8
+Author: Jonathan <jonathan@Victors-MacBook-Air-2.local>
+Date:   Sun Jan 27 12:11:28 2019 -0500
+
+    Finished
+
+ .../UserInterfaceState.xcuserstate                  | Bin 24388 -> 24849 bytes
+ .../p1_helloworld/Base.lproj/Main.storyboard        |   3 ++-
+ p1_helloworld/p1_helloworld/ViewController.swift    |  15 ++++++++++++++-
+ 3 files changed, 16 insertions(+), 2 deletions(-)
+
+commit 5b1a36b5a14efad26c7cf750ae8fcc8568b694fc
+Author: Jonathan <jonathan@Victors-MacBook-Air-2.local>
+Date:   Sat Jan 26 21:02:13 2019 -0500
+
+    It is possible to switch between countries with every click
+
+ .../UserInterfaceState.xcuserstate                 | Bin 23119 -> 24388 bytes
+ p1_helloworld/p1_helloworld/ViewController.swift   | 116 +++++++++++++++++----
+ 2 files changed, 95 insertions(+), 21 deletions(-)
+
+commit 1cd47a1ade51ae8297f5c13fc960eb20f26c2301
+Author: Jonathan <jonathan@Victors-MacBook-Air-2.local>
+Date:   Sat Jan 26 13:24:15 2019 -0500
+
+    Adding locations
+
+ .../UserInterfaceState.xcuserstate                 | Bin 21692 -> 23119 bytes
+ .../p1_helloworld/Base.lproj/Main.storyboard       |   9 ++++
+ p1_helloworld/p1_helloworld/ViewController.swift   |  54 ++++++++++++++++++---
+ 3 files changed, 57 insertions(+), 6 deletions(-)
+
+commit 749cb8457780a2dfaa4bc5f50364392b7e9ffe33
+Author: Jonathan <jonathan@Victors-MacBook-Air-2.local>
+Date:   Sat Jan 26 00:43:45 2019 -0500
+
+    Started some code
+
+ .../UserInterfaceState.xcuserstate                 | Bin 9539 -> 21692 bytes
+ .../p1_helloworld/Base.lproj/Main.storyboard       |  27 ++++++++++++++++---
+ p1_helloworld/p1_helloworld/ViewController.swift   |  29 ++++++++++++++++++++-
+ 3 files changed, 51 insertions(+), 5 deletions(-)
+
+commit 56e2da47025e62203955748bc3686e64d4943b22
+Author: Jonathan <jonathan@Victors-MacBook-Air-2.local>
+Date:   Fri Jan 25 23:45:47 2019 -0500
+
+    Test
+
+ .../p1_helloworld.xcodeproj/project.pbxproj        | 339 +++++++++++++++++++++
+ .../project.xcworkspace/contents.xcworkspacedata   |   7 +
+ .../xcshareddata/IDEWorkspaceChecks.plist          |   8 +
+ .../UserInterfaceState.xcuserstate                 | Bin 0 -> 9539 bytes
+ .../xcschemes/xcschememanagement.plist             |  14 +
+ p1_helloworld/p1_helloworld/AppDelegate.swift      |  46 +++
+ .../AppIcon.appiconset/Contents.json               |  98 ++++++
+ .../p1_helloworld/Assets.xcassets/Contents.json    |   6 +
+ .../Base.lproj/LaunchScreen.storyboard             |  25 ++
+ .../p1_helloworld/Base.lproj/Main.storyboard       |  24 ++
+ p1_helloworld/p1_helloworld/Info.plist             |  45 +++
+ p1_helloworld/p1_helloworld/ViewController.swift   |  20 ++
+ 12 files changed, 632 insertions(+)
+
+commit e0a30225c97601b4dfe5379fe68d975d0e6d5f41
+Author: Jonathan Chang <jchang66@binghamton.edu>
+Date:   Fri Jan 25 23:43:30 2019 -0500
+
+    Initial commit
+
+ LICENSE | 21 +++++++++++++++++++++
+ 1 file changed, 21 insertions(+)
