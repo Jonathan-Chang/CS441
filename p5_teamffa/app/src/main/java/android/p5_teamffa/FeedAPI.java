@@ -10,6 +10,6 @@ public interface FeedAPI {
     String BASE_URL = "https://www.reddit.com/r/";
 
     @GET("funny/.rss")
-    Call<Feed> listRepos();
+    Call<Feed> getFeed();
 
 }

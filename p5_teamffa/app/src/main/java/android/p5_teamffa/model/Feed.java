@@ -89,4 +89,9 @@ public class Feed implements Serializable {
     public void setEntries(List<Entry> entries) {
         this.entries = entries;
     }
+
+    @Override
+    public String toString(){
+        return "Feed: \n [Entrys: \n " + entries + " ]";
+    }
 }
